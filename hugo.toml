@@ -46,8 +46,8 @@ buildFuture = true
     # Both forms are Google Forms owned by the shared organizers' Gmail account.
     # In Google Forms: Send → "<>" (embed) → copy the src URL (ends in ?embedded=true).
     # While a URL is empty the site shows a static preview of the intended questions.
-    subscribe_google_form_url = ""   # TODO e.g. "https://docs.google.com/forms/d/e/.../viewform?embedded=true"
-    contact_google_form_url   = ""   # TODO
+    subscribe_google_form_url = "https://docs.google.com/forms/d/e/1FAIpQLSfphTNR49UgyM-JxzwVg6XgIQrXLpPh1gtuV455DKwosFNtFw/viewform?embedded=true"
+    contact_google_form_url   = "https://docs.google.com/forms/d/e/1FAIpQLSfQdHoYdfNDrB64dJ4HcuwsrQXZ487bTHyfqs153m3_LxpGMQ/viewform?embedded=true"
     subscribe_form_height = 2200     # px; adjust to the form's length to avoid a double scrollbar
     contact_form_height   = 1100
 
