@@ -7,6 +7,7 @@
     <div class="gform-wrap">
       <iframe class="gform" src="{{ . }}" title="Join form" loading="lazy" style="--gform-h: {{ $.Site.Params.forms.subscribe_form_height | default 3300 }}px">Loading…</iframe>
     </div>
+    <p class="form-note">Form not loading (some institutions block Google services)? Email us at <a href="mailto:{{ $.Site.Params.email }}">{{ $.Site.Params.email }}</a> with your name, affiliation and what you work on.</p>
     {{ else }}
     <form class="form form-preview" onsubmit="return false">
       <p class="form-note form-note-top">Preview only — replace with a Google Form: set <code>params.forms.subscribe_google_form_url</code> in <code>hugo.toml</code>. Use these questions when building it.</p>

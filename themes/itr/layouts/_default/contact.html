@@ -15,6 +15,7 @@
     {{ with .Site.Params.forms.contact_google_form_url }}
     <div class="gform-wrap">
       <iframe class="gform" src="{{ . }}" title="Contact form" loading="lazy" style="--gform-h: {{ $.Site.Params.forms.contact_form_height | default 1300 }}px">Loading…</iframe>
+      <p class="form-note">Form not loading? Email us directly at <a href="mailto:{{ $.Site.Params.email }}">{{ $.Site.Params.email }}</a>.</p>
     </div>
     {{ else }}
     <form class="form form-preview" onsubmit="return false">
