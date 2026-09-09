@@ -106,8 +106,7 @@ function buildContactForm_() {
   f.addListItem().setTitle('Topic').setRequired(true).setChoiceValues([
     'General question', "Speaker suggestion / I'd like to present", 'Membership / mailing list',
     'Slack access', 'Zoom or website issue', 'Other']);
-  f.addParagraphTextItem().setTitle('Message')
-    .setHelpText('Write as much as you like. The box grows automatically as you type.').setRequired(true);
+  f.addParagraphTextItem().setTitle('Message').setRequired(true);
   return f;
 }
 
