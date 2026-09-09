@@ -34,7 +34,8 @@ buildFuture = true
   # Approximate community size, shown on the home page (optional; set to "" to hide)
   community_size = "~150 members from 60+ labs"   # TODO: update
 
-  # Shared organizers' contact address (also owns the Google Forms).  email = "tearoomseminars@gmail.com"
+  # Shared organizers' contact address (also owns the Google Forms).
+  email = "tearoomseminars@gmail.com"
 
   # Default hero image. Any page can override it with `hero_image:` in its front
   # matter (see content/about.md) — put images in static/img/heroes/.
