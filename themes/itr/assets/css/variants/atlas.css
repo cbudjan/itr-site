@@ -1,0 +1,46 @@
+/* ═══ Variant: "Atlas" — clean scientific ═════════════════
+   White + cool grey, deep teal accent, Space Grotesk display, Inter body.
+   Neutral, institutional, data-forward. Closest in spirit to vgzt.org. */
+:root {
+  --bg: #fbfcfc;
+  --surface: #ffffff;
+  --surface-2: #eef2f3;
+  --text: #0f1b1e;
+  --text-2: #3b4a4e;
+  --muted: #6c7a7e;
+  --rule: #dfe6e8;
+  --accent: #0b6e73;
+  --accent-ink: #fff;
+  --accent-soft: #dcefef;
+  --accent-2: #d9542b;
+  --nav-bg: rgba(255,255,255,.9);
+  --nav-text: #0f1b1e;
+  --hero-bg: #0f1b1e;
+  --hero-text: #ffffff;
+  --footer-bg: #0f1b1e;
+  --footer-text: #c9d3d6;
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-mono: ui-monospace, 'SF Mono', Menlo, monospace;
+  --radius: 8px;
+  --radius-sm: 5px;
+  --shadow: 0 1px 2px rgba(15,27,30,.06);
+  --h1-weight: 700;
+  --h1-tracking: -0.03em;
+}
+.design-atlas .hero { padding: 5rem 0 4rem; }
+.design-atlas .hero .eyebrow { color: #7fd1d5; }
+.design-atlas .hero-lede { opacity: .8; }
+.design-atlas .hero .btn-ghost { border-color: rgba(255,255,255,.35); color: #fff; }
+.design-atlas .hero .btn-ghost:hover { border-color: #fff; }
+.design-atlas .hero .btn-primary { background: #7fd1d5; color: #0f1b1e; }
+.design-atlas .hero-slot { color: #9fb3b7; }
+.design-atlas .hero-figure { border-radius: var(--radius); box-shadow: 0 30px 60px -30px rgba(0,0,0,.7); }
+.design-atlas .btn, .design-atlas .chip, .design-atlas .nav-links a.nav-cta { border-radius: var(--radius-sm); }
+.design-atlas .talk-card { border-left: 4px solid var(--accent); }
+.design-atlas .talk-card.status-tba { border-left-color: var(--rule); }
+.design-atlas .talk-date { font-family: var(--font-body); font-weight: 700; }
+.design-atlas .section-next { background: var(--surface-2); }
+.design-atlas .fact { border-top: 3px solid var(--accent); }
+.design-atlas .brand-name { letter-spacing: -0.02em; }
+.design-atlas .avatar { border-radius: var(--radius-sm); }

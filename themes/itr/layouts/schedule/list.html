@@ -1,0 +1,47 @@
+{{ define "main" }}
+{{ $talks := where site.RegularPages "Section" "talks" }}
+{{ $upcoming := (where $talks "Date" "ge" now).ByDate }}
+{{ $past := (where $talks "Date" "lt" now).ByDate.Reverse }}
+
+{{ partial "page-head.html" . }}
+<section class="section section-tight">
+  <div class="container">
+    <p class="lede">{{ .Site.Params.session_slot }}. Zoom links are sent to members by email.</p>
+    {{ partial "timezone.html" . }}
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-label">Upcoming</div>
+    {{ if $upcoming }}
+      <div class="talk-list">
+        {{ range $upcoming }}{{ partial "talk-card.html" . }}{{ end }}
+      </div>
+    {{ else }}
+      <p class="muted">Scheduling for the next season is in progress.</p>
+    {{ end }}
+  </div>
+</section>
+
+<section class="section section-archive" id="past">
+  <div class="container">
+    <div class="section-label">Past sessions</div>
+    {{ range hugo.Data.seasons }}
+      {{ $s := . }}
+      {{ $inSeason := where $past "Params.season" $s.key }}
+      {{ if $inSeason }}
+      <details class="season" {{ if $s.current }}open{{ end }}>
+        <summary>
+          <span class="season-label">{{ $s.label }}</span>
+          <span class="season-sub">{{ $s.subtitle }} · {{ len $inSeason }} session{{ if ne (len $inSeason) 1 }}s{{ end }}</span>
+        </summary>
+        <div class="talk-list">
+          {{ range $inSeason }}{{ partial "talk-card.html" . }}{{ end }}
+        </div>
+      </details>
+      {{ end }}
+    {{ end }}
+  </div>
+</section>
+{{ end }}

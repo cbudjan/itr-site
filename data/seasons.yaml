@@ -1,0 +1,18 @@
+# Seasons run October → July. Key must match `season:` in talk front matter.
+# Listed newest first.
+- key: "2026-27"
+  label: "Season 2026–27"
+  subtitle: "Expanded scope: gastruloids and all stem cell-based embryo models"
+  start: "2026-10-01"
+  end: "2027-07-31"
+  current: true
+- key: "2025-26"
+  label: "Season 2025–26"
+  subtitle: "Gastruloid focus"
+  start: "2025-10-01"
+  end: "2026-07-31"
+- key: "archive"
+  label: "Earlier sessions (2020–2025)"
+  subtitle: "From the Cambridge tea room to Zoom"
+  start: "2020-01-01"
+  end: "2025-09-30"

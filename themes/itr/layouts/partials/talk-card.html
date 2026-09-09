@@ -1,0 +1,30 @@
+{{/* Expects a talk page as context. */}}
+{{ $utc := .Date.UTC.Format "2006-01-02T15:04:05Z" }}
+{{ $isTBA := eq .Params.status "tba" }}
+<article class="talk-card status-{{ .Params.status | default "scheduled" }} format-{{ .Params.format | default "pi" }}">
+  <div class="talk-when">
+    <time class="talk-date" datetime="{{ $utc }}" data-utc="{{ $utc }}" data-fmt="date">{{ .Date.Format "Mon 2 Jan 2006" }}</time>
+    <span class="talk-time" data-utc="{{ $utc }}" data-fmt="time">{{ .Date.Format "15:04" }} UK</span>
+  </div>
+  <div class="talk-body">
+    <div class="talk-meta">
+      {{ with .Params.format }}<span class="chip chip-format">{{ if eq . "junior" }}Early-career session{{ else if eq . "roundtable" }}Roundtable{{ else if eq . "special" }}Special session{{ else }}Group leader session{{ end }}</span>{{ end }}
+      {{ if $isTBA }}<span class="chip chip-tba">Speaker TBA</span>{{ end }}
+      {{ if eq .Params.status "cancelled" }}<span class="chip chip-cancelled">Cancelled</span>{{ end }}
+    </div>
+    <h3 class="talk-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+    <ul class="talk-speakers">
+      {{ range .Params.speakers }}{{ if ne .name "TBA" }}
+      <li>
+        <span class="speaker-name">{{ .name }}</span>{{ with .affiliation }}<span class="speaker-affil"> · {{ . }}</span>{{ end }}
+        {{ with .talk }}<div class="speaker-talk">“{{ . }}”</div>{{ end }}
+      </li>
+      {{ end }}{{ end }}
+    </ul>
+    <div class="talk-actions">
+      {{ if not $isTBA }}<a class="btn btn-ghost btn-sm" href="{{ .RelPermalink }}calendar.ics" download>Add to calendar</a>{{ end }}
+      {{ with .Params.recording_url }}<a class="btn btn-ghost btn-sm" href="{{ . }}" target="_blank" rel="noopener">Recording</a>{{ end }}
+      {{ with .Params.preprint_url }}<a class="btn btn-ghost btn-sm" href="{{ . }}" target="_blank" rel="noopener">Preprint</a>{{ end }}
+    </div>
+  </div>
+</article>

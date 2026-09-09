@@ -1,0 +1,101 @@
+{{ define "main" }}
+{{ partial "page-head.html" . }}
+<section class="section section-tight"><div class="container narrow"><div class="lede">{{ .Content }}</div></div></section>
+<section class="section">
+  <div class="container narrow">
+    {{ with .Site.Params.forms.subscribe_google_form_url }}
+    <div class="gform-wrap">
+      <iframe class="gform" src="{{ . }}" title="Join form" loading="lazy" style="height: {{ $.Site.Params.forms.subscribe_form_height | default 2200 }}px">Loading…</iframe>
+    </div>
+    {{ else }}
+    <form class="form form-preview" onsubmit="return false">
+      <p class="form-note form-note-top">Preview only — replace with a Google Form: set <code>params.forms.subscribe_google_form_url</code> in <code>hugo.toml</code>. Use these questions when building it.</p>
+      <fieldset>
+        <legend>About you</legend>
+        <div class="field-row">
+          <div class="field">
+            <label for="s-name">Full name</label>
+            <input id="s-name" name="name" type="text" required autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="s-email">Email <span class="hint">(institutional address preferred)</span></label>
+            <input id="s-email" name="email" type="email" required autocomplete="email">
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="s-affil">Lab / group and institution</label>
+            <input id="s-affil" name="affiliation" type="text" required placeholder="e.g. Martinez Arias lab, UPF Barcelona">
+          </div>
+          <div class="field">
+            <label for="s-position">Position</label>
+            <select id="s-position" name="position" required>
+              <option value="">Select…</option>
+              <option>PhD student</option>
+              <option>Postdoc</option>
+              <option>Research scientist / staff</option>
+              <option>Group leader / PI</option>
+              <option>Master's / undergraduate</option>
+              <option>Industry</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="s-url">Lab website or profile <span class="hint">(optional, helps us screen requests)</span></label>
+          <input id="s-url" name="url" type="url" placeholder="https://">
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Your work</legend>
+        <p class="hint">Which models do you work with or plan to work with?</p>
+        <div class="checks">
+          <label><input type="checkbox" name="models" value="mouse gastruloids"> Mouse gastruloids</label>
+          <label><input type="checkbox" name="models" value="human gastruloids"> Human gastruloids</label>
+          <label><input type="checkbox" name="models" value="other species gastruloids"> Gastruloids from other species</label>
+          <label><input type="checkbox" name="models" value="TLS / somitoids / neuruloids"> Trunk-like structures, somitoids, neuruloids</label>
+          <label><input type="checkbox" name="models" value="blastoids / embryoids"> Blastoids, embryoids, ETX/ETiX</label>
+          <label><input type="checkbox" name="models" value="2D micropatterns"> 2D micropattern models</label>
+          <label><input type="checkbox" name="models" value="organoids / assembloids"> Organoids / assembloids</label>
+          <label><input type="checkbox" name="models" value="computational"> Computational / theory</label>
+          <label><input type="checkbox" name="models" value="other"> Other</label>
+        </div>
+        <div class="field">
+          <label for="s-interest">One or two sentences on your research interest</label>
+          <textarea id="s-interest" name="interest" rows="3" required></textarea>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>What would you like?</legend>
+        <div class="checks">
+          <label><input type="checkbox" name="wants" value="email announcements" checked> Email announcements of upcoming sessions (Zoom links)</label>
+          <label><input type="checkbox" name="wants" value="slack invite"> Invitation to the community Slack</label>
+          <label><input type="checkbox" name="wants" value="recordings"> Access to recordings when available</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Get involved <span class="hint">(optional)</span></legend>
+        <div class="checks">
+          <label><input type="checkbox" name="volunteer" value="speak"> I'd like to present my work</label>
+          <label><input type="checkbox" name="volunteer" value="suggest"> I want to suggest a speaker</label>
+        </div>
+        <div class="field">
+          <label for="s-notes">Anything else? Speaker suggestions, topics you'd like covered…</label>
+          <textarea id="s-notes" name="notes" rows="3"></textarea>
+        </div>
+        <div class="field">
+          <label for="s-heard">How did you hear about the Tea Room?</label>
+          <input id="s-heard" name="heard_from" type="text">
+        </div>
+      </fieldset>
+
+      <label class="consent"><input type="checkbox" name="consent" required> I agree that the organizers store this information to manage membership and send announcements. You can ask to be removed at any time.</label>
+      <button class="btn btn-primary" type="submit" disabled>Send request</button>
+    </form>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

@@ -1,0 +1,112 @@
+# ─────────────────────────────────────────────────────────────
+# International Tea Room (ITR) — Hugo site configuration
+# ─────────────────────────────────────────────────────────────
+# baseURL: GitHub Pages project URL for now. When you buy a domain,
+# change this to "https://yourdomain.org/" and add static/CNAME.
+baseURL      = "https://cbudjan.github.io/itr-site/"
+locale = "en"
+title        = "International Tea Room"
+theme        = "itr"
+
+# All talk dates in content/talks/*.md are written in UK time.
+# Hugo interprets front-matter dates without an offset in this zone.
+timeZone = "Europe/London"
+
+enableRobotsTXT = true
+
+# Talks are dated in the future by design — build them.
+buildFuture = true
+
+[params]
+  # ── Design variant ─────────────────────────────────────────
+  # One of: "tearoom" | "atlas" | "microscope"
+  # See README.md for a description of each.
+  design = "microscope"
+
+  tagline     = "A virtual seminar series on gastruloids and stem cell-based embryo models"
+  description = "The International Tea Room (ITR) is a monthly virtual seminar series and community for researchers working on gastruloids and other stem cell-based embryo models."
+
+  # Shown on the home page and in the schedule header.
+  # Keep in sync with the actual recurring slot.
+  session_slot   = "Second Monday of every month · 14:00 UK time · Zoom"
+  session_length = "50–60 minutes (30–40 min talk + discussion)"
+
+  # Approximate community size, shown on the home page (optional; set to "" to hide)
+  community_size = "~150 members from 60+ labs"   # TODO: update
+
+  # Contact email shown on the site. TODO: replace with the shared organizers' Gmail address.
+  email = "TODO-shared-address@gmail.com"
+
+  # Default hero image. Any page can override it with `hero_image:` in its front
+  # matter (see content/about.md) — put images in static/img/heroes/.
+  hero_image = "img/heroes/default.jpg"   # TODO: replace with community microscopy image
+  hero_credit = "TODO: image credit"      # shown small in the hero corner (optional)
+
+  [params.forms]
+    # Both forms are Google Forms owned by the shared organizers' Gmail account.
+    # In Google Forms: Send → "<>" (embed) → copy the src URL (ends in ?embedded=true).
+    # While a URL is empty the site shows a static preview of the intended questions.
+    subscribe_google_form_url = ""   # TODO e.g. "https://docs.google.com/forms/d/e/.../viewform?embedded=true"
+    contact_google_form_url   = ""   # TODO
+    subscribe_form_height = 2200     # px; adjust to the form's length to avoid a double scrollbar
+    contact_form_height   = 1100
+
+  [params.social]
+    bluesky  = ""   # e.g. "tearoom.bsky.social"
+    x        = ""
+    linkedin = ""   # full URL
+    youtube  = ""   # full URL, if recordings are hosted
+    github   = "cbudjan/itr-site"
+
+  [params.slack]
+    # Slack is invite-only; the form asks whether people want an invite.
+    # If you later create a public invite link, put it here to show a button.
+    invite_url = ""
+
+# ── Navigation ─────────────────────────────────────────────
+[[menus.main]]
+  name   = "Schedule"
+  url    = "/schedule/"
+  weight = 1
+[[menus.main]]
+  name   = "People"
+  url    = "/people/"
+  weight = 2
+[[menus.main]]
+  name   = "About"
+  url    = "/about/"
+  weight = 3
+[[menus.main]]
+  name   = "Contact"
+  url    = "/contact/"
+  weight = 4
+[[menus.main]]
+  name   = "Join"
+  url    = "/subscribe/"
+  weight = 5
+  [menus.main.params]
+    cta = true
+
+# ── URLs ───────────────────────────────────────────────────
+[permalinks]
+  talks = "/talks/:contentbasename/"
+
+# ── Output formats: per-talk .ics calendar files ───────────
+[mediaTypes."text/calendar"]
+  suffixes = ["ics"]
+
+[outputFormats.ICS]
+  mediaType    = "text/calendar"
+  baseName     = "calendar"
+  isPlainText  = true
+  notAlternative = true
+
+[outputs]
+  home    = ["HTML"]
+  section = ["HTML"]
+  page    = ["HTML"]   # talks add "ICS" via cascade in content/talks/_index.md
+
+# ── Markdown ───────────────────────────────────────────────
+[markup]
+  [markup.goldmark.renderer]
+    unsafe = true

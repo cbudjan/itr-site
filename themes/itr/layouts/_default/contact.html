@@ -1,0 +1,50 @@
+{{ define "main" }}
+{{ partial "page-head.html" . }}
+<section class="section">
+  <div class="container two-col">
+    <div class="prose">
+      {{ .Content }}
+      <h3>Email</h3>
+      <p><a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a></p>
+      <h3>Organizers</h3>
+      <ul>
+        {{ range hugo.Data.organizers.current }}<li>{{ .name }} — {{ .affiliation }}</li>{{ end }}
+      </ul>
+    </div>
+
+    {{ with .Site.Params.forms.contact_google_form_url }}
+    <div class="gform-wrap">
+      <iframe class="gform" src="{{ . }}" title="Contact form" loading="lazy" style="height: {{ $.Site.Params.forms.contact_form_height | default 1100 }}px">Loading…</iframe>
+    </div>
+    {{ else }}
+    <form class="form form-preview" onsubmit="return false">
+      <p class="form-note form-note-top">Preview only — replace with a Google Form: set <code>params.forms.contact_google_form_url</code> in <code>hugo.toml</code>. Use these questions when building it.</p>
+      <div class="field">
+        <label for="c-name">Name</label>
+        <input id="c-name" name="name" type="text" required autocomplete="name">
+      </div>
+      <div class="field">
+        <label for="c-email">Email</label>
+        <input id="c-email" name="email" type="email" required autocomplete="email">
+      </div>
+      <div class="field">
+        <label for="c-topic">Topic</label>
+        <select id="c-topic" name="topic" required>
+          <option value="general">General question</option>
+          <option value="speaker">Speaker suggestion / I'd like to present</option>
+          <option value="membership">Membership / mailing list</option>
+          <option value="slack">Slack access</option>
+          <option value="technical">Zoom or website issue</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="c-message">Message</label>
+        <textarea id="c-message" name="message" rows="6" required></textarea>
+      </div>
+      <button class="btn btn-primary" type="submit" disabled>Send message</button>
+    </form>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

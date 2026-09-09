@@ -1,0 +1,38 @@
+# Organizers shown on /people/. Photos: static/img/organizers/<photo>
+# TODO: confirm names, affiliations, roles and add photos/links.
+current:
+  - name: "Christoph Budjan"
+    affiliation: "Harvard Medical School · Dana-Farber Cancer Institute, Boston"
+    role: "Co-organizer"
+    photo: ""
+    url: "https://cbudjan.com"
+    focus: "Human gastruloids, hemogenic gastruloids"
+  - name: "André Dias"
+    affiliation: "NOVA Institute for Medical Systems Biology (NIMSB), Lisbon"
+    role: "Co-organizer"
+    photo: ""
+    url: "https://nimsb.unl.pt/research-innovation/our-research-groups-final/dias-lab/"
+    focus: "Signalling-dependent modularity of the gastrula; human gastruloids"
+  - name: "Giuliana Rossi"
+    affiliation: "Institute of Human Biology (IHB), Roche, Basel"
+    role: "Co-organizer"
+    photo: ""
+    url: "https://institutehumanbiology.com/research/multi-tissue-systems-engineering/"   # IHB no longer has individual profile pages (Sep 2026)
+    focus: "Senior Scientist, Multi-Tissue Systems Engineering; embryonic organoids for translational applications"
+  - name: "Jesse Veenvliet"
+    affiliation: "Max Planck Institute of Molecular Cell Biology and Genetics, Dresden"
+    role: "Co-organizer"
+    photo: ""
+    url: "https://www.stembryogenesis.com"
+    focus: "Mouse gastruloids, trunk-like structures"
+
+past:
+  - name: "Alfonso Martinez Arias"
+    affiliation: "Department of Genetics, University of Cambridge (now Universitat Pompeu Fabra, Barcelona)"
+    role: "Founder — hosted the original tea room meetings in Cambridge"
+    url: ""
+  - name: "Naomi Moris"
+    affiliation: "The Francis Crick Institute, London"
+    role: "Past organizer"
+    url: ""
+  # TODO: add any other previous organizers

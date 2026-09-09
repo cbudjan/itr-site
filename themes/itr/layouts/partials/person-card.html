@@ -1,0 +1,10 @@
+{{ $p := .person }}{{ $t := .talk }}
+<div class="person-card">
+  <div class="avatar">{{ with $p.photo }}<img src="{{ printf "img/speakers/%s" . | relURL }}" alt="{{ $p.name }}">{{ else }}<span>{{ substr $p.name 0 1 }}</span>{{ end }}</div>
+  <div class="person-body">
+    <div class="person-name">{{ if $p.url }}<a href="{{ $p.url }}" target="_blank" rel="noopener">{{ $p.name }}</a>{{ else }}{{ $p.name }}{{ end }}</div>
+    {{ with $p.affiliation }}<div class="person-affil">{{ . }}</div>{{ end }}
+    <a class="person-talk" href="{{ $t.RelPermalink }}">{{ with $p.talk }}{{ . }}{{ else }}{{ $t.Title }}{{ end }}</a>
+    <div class="person-date">{{ $t.Date.Format "Jan 2006" }}</div>
+  </div>
+</div>

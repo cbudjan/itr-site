@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//International Tea Room//Schedule//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:{{ .File.ContentBaseName }}@internationaltearoom
+DTSTAMP:{{ now.UTC.Format "20060102T150405Z" }}
+DTSTART:{{ .Date.UTC.Format "20060102T150405Z" }}
+DTEND:{{ (.Date.Add (time.ParseDuration (printf "%dm" (.Params.duration | default 60)))).UTC.Format "20060102T150405Z" }}
+SUMMARY:ITR: {{ .Title }}{{ with .Params.speakers }} — {{ range $i, $s := . }}{{ if $i }}, {{ end }}{{ $s.name }}{{ end }}{{ end }}
+DESCRIPTION:International Tea Room seminar. Zoom link is sent to members by email.\n{{ .Permalink }}
+URL:{{ .Permalink }}
+LOCATION:Zoom
+END:VEVENT
+END:VCALENDAR

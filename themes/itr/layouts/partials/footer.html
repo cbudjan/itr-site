@@ -1,0 +1,35 @@
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-col footer-brand">
+      {{ partial "mark.html" . }}
+      <div>
+        <div class="footer-name">International Tea Room</div>
+        <div class="footer-tag">{{ .Site.Params.tagline }}</div>
+      </div>
+    </div>
+    <div class="footer-col">
+      <div class="footer-heading">Sessions</div>
+      <p>{{ .Site.Params.session_slot }}</p>
+      <a href="{{ "/schedule/" | relURL }}">View schedule →</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-heading">Join</div>
+      <p>Mailing list and community Slack are by request.</p>
+      <a href="{{ "/subscribe/" | relURL }}">Request to join →</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-heading">Contact</div>
+      <p><a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a></p>
+      <div class="footer-social">
+        {{ with .Site.Params.social.bluesky }}<a href="https://bsky.app/profile/{{ . }}" target="_blank" rel="noopener">Bluesky</a>{{ end }}
+        {{ with .Site.Params.social.x }}<a href="https://x.com/{{ . }}" target="_blank" rel="noopener">X</a>{{ end }}
+        {{ with .Site.Params.social.linkedin }}<a href="{{ . }}" target="_blank" rel="noopener">LinkedIn</a>{{ end }}
+        {{ with .Site.Params.social.youtube }}<a href="{{ . }}" target="_blank" rel="noopener">YouTube</a>{{ end }}
+        {{ with .Site.Params.social.github }}<a href="https://github.com/{{ . }}" target="_blank" rel="noopener">GitHub</a>{{ end }}
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© {{ now.Year }} International Tea Room organizers · Built with Hugo</span>
+  </div>
+</footer>

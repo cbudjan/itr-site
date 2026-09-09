@@ -1,0 +1,38 @@
+/* ═══ Variant: "Tea Room" — warm editorial ═══════════════
+   Cream paper, terracotta accent, Fraunces serif display, Karla body.
+   Leans into the informal Cambridge tea-room origin: friendly, human, unhurried. */
+:root {
+  --bg: #f7f3ec;
+  --surface: #fffdf9;
+  --surface-2: #efe9dd;
+  --text: #211d17;
+  --text-2: #4a443b;
+  --muted: #877f70;
+  --rule: #e3dccd;
+  --accent: #b4532c;
+  --accent-ink: #fff;
+  --accent-soft: #f5e2d6;
+  --accent-2: #3f6b5e;
+  --nav-bg: rgba(247,243,236,.9);
+  --nav-text: #211d17;
+  --hero-bg: transparent;
+  --hero-text: #211d17;
+  --footer-bg: #2a231b;
+  --footer-text: #e8dfd0;
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Karla', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+  --radius: 14px;
+  --h1-weight: 600;
+  --h1-tracking: -0.015em;
+}
+.design-tearoom h1, .design-tearoom .hero h1 { font-variation-settings: 'opsz' 144; }
+.design-tearoom .hero { background: radial-gradient(1200px 500px at 15% -10%, #f2e4d3 0%, transparent 60%); }
+.design-tearoom .hero h1 em { font-style: italic; }
+.design-tearoom .hero-figure { border-radius: 22px 22px 22px 80px; }
+.design-tearoom .eyebrow { color: var(--accent-2); }
+.design-tearoom .talk-card { box-shadow: none; }
+.design-tearoom .talk-card:hover { box-shadow: var(--shadow); }
+.design-tearoom .section-label::after { background: repeating-linear-gradient(90deg, var(--rule) 0 6px, transparent 6px 12px); }
+.design-tearoom .cta-box { background: linear-gradient(180deg, #fffdf9, #f9f3e9); }
+.design-tearoom .btn-primary { box-shadow: 0 6px 16px -8px rgba(180,83,44,.7); }

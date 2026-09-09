@@ -1,0 +1,71 @@
+/* ═══ Variant: "Microscope" — dark hero, fluorescence accents ═══
+   Near-black hero with a full-bleed microscopy image, cyan/magenta channel
+   colours, Outfit display + IBM Plex body/mono. Striking and shareable;
+   depends on a good hero image (solicit from the community). */
+:root {
+  --bg: #f5f6f8;
+  --surface: #ffffff;
+  --surface-2: #e9ecf1;
+  --text: #101319;
+  --text-2: #3d4350;
+  --muted: #6f7686;
+  --rule: #dde1e8;
+  --accent: #d4267a;           /* magenta channel */
+  --accent-ink: #fff;
+  --accent-soft: #fbe1ee;
+  --accent-2: #12b5c9;         /* cyan channel */
+  --nav-bg: rgba(16,19,25,.85);
+  --nav-text: #f5f6f8;
+  --hero-bg: #0b0d12;
+  --hero-text: #ffffff;
+  --footer-bg: #0b0d12;
+  --footer-text: #c3c8d4;
+  --font-display: 'Outfit', system-ui, sans-serif;
+  --font-body: 'IBM Plex Sans', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+  --radius: 12px;
+  --h1-weight: 800;
+  --h1-tracking: -0.035em;
+}
+.design-microscope .site-header { border-bottom-color: rgba(255,255,255,.08); }
+.design-microscope .brand-sub { color: rgba(255,255,255,.55); }
+.design-microscope .nav-links a { color: #fff; }
+.design-microscope .nav-links a.nav-cta { background: var(--accent-2); color: #0b0d12; }
+.design-microscope .nav-toggle span { background: #fff; }
+.design-microscope .hero { position: relative; overflow: hidden; padding: 6rem 0 5rem; }
+.design-microscope .hero::before {
+  content: ''; position: absolute; inset: 0;
+  background: var(--hero-img) center/cover no-repeat;
+  opacity: .55; filter: saturate(1.2);
+}
+.design-microscope .hero::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(90deg, rgba(11,13,18,.95) 0%, rgba(11,13,18,.75) 45%, rgba(11,13,18,.25) 100%);
+}
+.design-microscope .hero-inner { position: relative; z-index: 1; grid-template-columns: 1fr; }
+.design-microscope .hero-figure { display: none; }
+.design-microscope .hero .eyebrow { color: var(--accent-2); }
+.design-microscope .hero h1 { background: linear-gradient(90deg, #fff 0%, #a9e9f1 100%); -webkit-background-clip: text; background-clip: text; color: transparent; display: inline-block; }
+.design-microscope .hero-lede { max-width: 56ch; }
+.design-microscope .hero .btn-primary { background: var(--accent-2); color: #0b0d12; }
+.design-microscope .hero .btn-ghost { border-color: rgba(255,255,255,.4); color: #fff; }
+.design-microscope .hero-slot { color: var(--accent-2); }
+.design-microscope .talk-time { color: var(--accent-2); }
+.design-microscope .chip-format { background: #dff6f9; color: #0a7e8d; }
+.design-microscope .section-label::after { background: linear-gradient(90deg, var(--accent-2), var(--accent), transparent); height: 2px; }
+.design-microscope .talk-card:hover { border-color: var(--accent-2); }
+.design-microscope .fact { border-left: 3px solid var(--accent-2); }
+.design-microscope .fact:nth-child(even) { border-left-color: var(--accent); }
+.design-microscope .avatar { background: linear-gradient(135deg, var(--accent-2), var(--accent)); color: #fff; }
+
+/* Sub-page banners: same treatment as the home hero, per-page image via --hero-img */
+.design-microscope .page-head { background: var(--hero-bg); color: #fff; padding: 4rem 0 3rem; overflow: hidden; }
+.design-microscope .page-head::before { content: ''; position: absolute; inset: 0; background: var(--hero-img) center/cover no-repeat; opacity: .5; filter: saturate(1.2); }
+.design-microscope .page-head::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(11,13,18,.95) 0%, rgba(11,13,18,.7) 50%, rgba(11,13,18,.3) 100%); }
+.design-microscope .page-head .container { position: relative; z-index: 1; }
+.design-microscope .page-head h1 { color: #fff; }
+.design-microscope .page-head .lede { color: rgba(255,255,255,.82); }
+.design-microscope .page-head .subnav a { color: #fff; border-color: rgba(255,255,255,.3); }
+.design-microscope .page-head .subnav a:hover { border-color: var(--accent-2); }
+.design-microscope .page-head .hero-credit { z-index: 1; color: #fff; }
+.design-microscope .hero-credit { z-index: 1; color: #fff; }

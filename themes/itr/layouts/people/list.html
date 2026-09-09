@@ -1,0 +1,70 @@
+{{ define "main" }}
+{{ $talks := where site.RegularPages "Section" "talks" }}
+{{ $past := (where $talks "Date" "lt" now).ByDate.Reverse }}
+{{ $upcoming := (where $talks "Date" "ge" now).ByDate }}
+
+{{ partial "page-head.html" . }}
+<section class="section section-tight"><div class="container"><div class="lede">{{ .Content }}</div></div></section>
+
+<section class="section" id="speakers">
+  <div class="container">
+    <div class="section-label">Speakers</div>
+
+    {{ $hasUpcoming := false }}
+    {{ range $upcoming }}{{ range .Params.speakers }}{{ if ne .name "TBA" }}{{ $hasUpcoming = true }}{{ end }}{{ end }}{{ end }}
+    {{ if $hasUpcoming }}
+    <h2 class="h-sub">Upcoming</h2>
+    <div class="people-grid">
+      {{ range $upcoming }}{{ $t := . }}
+        {{ range .Params.speakers }}{{ if ne .name "TBA" }}
+        {{ partial "person-card.html" (dict "person" . "talk" $t) }}
+        {{ end }}{{ end }}
+      {{ end }}
+    </div>
+    {{ end }}
+
+    {{ range hugo.Data.seasons }}
+      {{ $s := . }}
+      {{ $inSeason := where $past "Params.season" $s.key }}
+      {{ if $inSeason }}
+      <h2 class="h-sub">{{ $s.label }}</h2>
+      <div class="people-grid">
+        {{ range $inSeason }}{{ $t := . }}
+          {{ range .Params.speakers }}
+          {{ partial "person-card.html" (dict "person" . "talk" $t) }}
+          {{ end }}
+        {{ end }}
+      </div>
+      {{ end }}
+    {{ end }}
+  </div>
+</section>
+
+<section class="section section-alt" id="organizers">
+  <div class="container">
+    <div class="section-label">Organizers</div>
+    <p class="muted">Questions or speaker suggestions? <a href="{{ "/contact/" | relURL }}">Get in touch</a>.</p>
+    <div class="people-grid organizers">
+      {{ range hugo.Data.organizers.current }}
+      <div class="person-card">
+        <div class="avatar">{{ with .photo }}<img src="{{ printf "img/organizers/%s" . | relURL }}" alt="{{ $.name }}">{{ else }}<span>{{ substr .name 0 1 }}</span>{{ end }}</div>
+        <div class="person-body">
+          <div class="person-name">{{ if .url }}<a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a>{{ else }}{{ .name }}{{ end }}</div>
+          <div class="person-affil">{{ .affiliation }}</div>
+          {{ with .focus }}<div class="person-focus">{{ . }}</div>{{ end }}
+        </div>
+      </div>
+      {{ end }}
+    </div>
+
+    {{ with hugo.Data.organizers.past }}
+    <h2 class="h-sub">Founding &amp; past organizers</h2>
+    <ul class="past-organizers">
+      {{ range . }}
+      <li><strong>{{ .name }}</strong> — {{ .affiliation }}{{ with .role }} · <em>{{ . }}</em>{{ end }}</li>
+      {{ end }}
+    </ul>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

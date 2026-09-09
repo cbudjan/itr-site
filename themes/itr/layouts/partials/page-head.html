@@ -1,0 +1,15 @@
+{{/* Page banner with per-page hero image.
+     Front matter `hero_image: "img/heroes/foo.jpg"` overrides site default;
+     `hero_credit:` overrides the default credit line. */}}
+{{ $img := .Params.hero_image | default site.Params.hero_image }}
+{{ $credit := .Params.hero_credit | default site.Params.hero_credit }}
+<section class="page-head" {{ with $img }}style="--hero-img: url({{ . | relURL }})"{{ end }}>
+  <div class="container">
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.lede | default .Description }}<p class="lede">{{ . }}</p>{{ end }}
+    {{ with .Params.subnav }}
+    <nav class="subnav" aria-label="Sections">{{ range . }}<a href="{{ .url }}">{{ .name }}</a>{{ end }}</nav>
+    {{ end }}
+  </div>
+  {{ with $credit }}<span class="hero-credit">{{ . }}</span>{{ end }}
+</section>
