@@ -24,7 +24,7 @@ Anyone actively working with, or planning to work with, stem cell-based embryo m
 - micropattern-based 2D models and organ-level assembloids
 
 Students, postdocs and group leaders are equally welcome. Membership is by request so that
-the group stays a working community rather than a broadcast list. See [Join](/subscribe/).
+the group stays a working community rather than a broadcast list. See [Join]({{< relref "subscribe" >}}).
 
 ## Format
 
@@ -42,7 +42,7 @@ the group stays a working community rather than a broadcast list. See [Join](/su
 
 Beyond the monthly sessions, members can join a **Slack workspace** for follow-up questions to
 speakers, methods troubleshooting, and announcements of positions, preprints and meetings.
-Slack access is invite-only; tick the box on the [join form](/subscribe/).
+Slack access is invite-only; tick the box on the [join form]({{< relref "subscribe" >}}).
 
 ## History
 

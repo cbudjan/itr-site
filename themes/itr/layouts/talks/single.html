@@ -1,7 +1,7 @@
 {{ define "main" }}
 {{ $utc := .Date.UTC.Format "2006-01-02T15:04:05Z" }}
 <article class="container talk-page">
-  <p class="breadcrumb"><a href="{{ "/schedule/" | relURL }}">← Schedule</a></p>
+  <p class="breadcrumb"><a href="{{ "schedule/" | relURL }}">← Schedule</a></p>
   <div class="talk-meta">
     {{ with .Params.format }}<span class="chip chip-format">{{ if eq . "junior" }}Early-career session{{ else if eq . "roundtable" }}Roundtable{{ else }}Group leader session{{ end }}</span>{{ end }}
     {{ if eq .Params.status "tba" }}<span class="chip chip-tba">Speaker TBA</span>{{ end }}
@@ -25,7 +25,7 @@
       {{ if ne .Params.status "tba" }}<a class="btn btn-primary btn-sm" href="{{ .RelPermalink }}calendar.ics" download>Add to calendar (.ics)</a>{{ end }}
       {{ with .Params.recording_url }}<a class="btn btn-ghost btn-sm" href="{{ . }}" target="_blank" rel="noopener">Watch recording</a>{{ end }}
       {{ with .Params.preprint_url }}<a class="btn btn-ghost btn-sm" href="{{ . }}" target="_blank" rel="noopener">Read the preprint</a>{{ end }}
-      <a class="btn btn-ghost btn-sm" href="{{ "/subscribe/" | relURL }}">Not a member? Request to join</a>
+      <a class="btn btn-ghost btn-sm" href="{{ "subscribe/" | relURL }}">Not a member? Request to join</a>
     </div>
   </div>
 

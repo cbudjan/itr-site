@@ -9,4 +9,4 @@ subnav:
 ---
 
 Everyone who has presented at the Tea Room, and the team that runs it. Speaker entries are
-generated from the [schedule](/schedule/) — add a talk and the speaker appears here.
+generated from the [schedule]({{< relref "schedule" >}}) — add a talk and the speaker appears here.

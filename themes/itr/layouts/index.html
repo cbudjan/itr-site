@@ -12,8 +12,8 @@
       <h1>International<br>Tea Room</h1>
       <p class="hero-lede">{{ .Site.Params.tagline }}</p>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="{{ "/subscribe/" | relURL }}">Request to join</a>
-        <a class="btn btn-ghost" href="{{ "/schedule/" | relURL }}">See the schedule</a>
+        <a class="btn btn-primary" href="{{ "subscribe/" | relURL }}">Request to join</a>
+        <a class="btn btn-ghost" href="{{ "schedule/" | relURL }}">See the schedule</a>
       </div>
       <p class="hero-slot">{{ .Site.Params.session_slot }}</p>
     </div>
@@ -34,7 +34,7 @@
       {{ partial "talk-card.html" . }}
       <p class="tz-inline">{{ partial "timezone.html" $ }}</p>
     {{ else }}
-      <p class="muted">The next season is being scheduled — check back soon or <a href="{{ "/subscribe/" | relURL }}">join the list</a> to be notified.</p>
+      <p class="muted">The next season is being scheduled — check back soon or <a href="{{ "subscribe/" | relURL }}">join the list</a> to be notified.</p>
     {{ end }}
   </div>
 </section>
@@ -57,12 +57,12 @@
     <div class="cta-box">
       <h2>Join the community</h2>
       <p>Membership is by request. Tell us what you work on and whether you'd like the mailing list, the Slack, or both.</p>
-      <a class="btn btn-primary" href="{{ "/subscribe/" | relURL }}">Request to join</a>
+      <a class="btn btn-primary" href="{{ "subscribe/" | relURL }}">Request to join</a>
     </div>
     <div class="cta-box">
       <h2>Present your work</h2>
       <p>We welcome self-nominations, especially preprints and unpublished work from early-career researchers.</p>
-      <a class="btn btn-ghost" href="{{ "/contact/" | relURL }}">Suggest a talk</a>
+      <a class="btn btn-ghost" href="{{ "contact/" | relURL }}">Suggest a talk</a>
     </div>
   </div>
 </section>
