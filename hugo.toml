@@ -56,7 +56,7 @@ buildFuture = true
     x        = ""
     linkedin = ""   # full URL
     youtube  = ""   # full URL, if recordings are hosted
-    github   = "cbudjan/itr-site"
+    github   = ""   # leave empty to hide the footer link
 
   [params.slack]
     # Slack is invite-only; the form asks whether people want an invite.
