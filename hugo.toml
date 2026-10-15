@@ -46,8 +46,8 @@ buildFuture = true
     # Both forms are Google Forms owned by the shared organizers' Gmail account.
     # In Google Forms: Send → "<>" (embed) → copy the src URL (ends in ?embedded=true).
     # While a URL is empty the site shows a static preview of the intended questions.
-    subscribe_google_form_url = "https://docs.google.com/forms/d/e/1FAIpQLSfphTNR49UgyM-JxzwVg6XgIQrXLpPh1gtuV455DKwosFNtFw/viewform?embedded=true"
-    contact_google_form_url   = "https://docs.google.com/forms/d/e/1FAIpQLSfQdHoYdfNDrB64dJ4HcuwsrQXZ487bTHyfqs153m3_LxpGMQ/viewform?embedded=true"
+    subscribe_google_form_url = "https://docs.google.com/forms/d/e/1FAIpQLScpMC9y8Rql4NajcE-wptdgA40On-xDRcLFvsZ0FegJ9CHUfQ/viewform?embedded=true"
+    contact_google_form_url   = "https://docs.google.com/forms/d/e/1FAIpQLSfiQgsoQ3MogOsD8E8XC77-7lNQgL4qTuVMYsfLjIOE624twA/viewform?embedded=true"
     # Iframe heights (px, desktop). Measured Sep 2026: join ≈ 3050 px, contact ≈ 1050 px.
     # Narrow screens get 30% more automatically. Raise these if you add questions.
     subscribe_form_height = 3300
