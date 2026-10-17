@@ -1,9 +1,9 @@
 # ─────────────────────────────────────────────────────────────
 # International Tea Room (ITR) — Hugo site configuration
 # ─────────────────────────────────────────────────────────────
-# baseURL: GitHub Pages project URL for now. When you buy a domain,
+# baseURL: the organization's GitHub Pages site. When you buy a domain,
 # change this to "https://yourdomain.org/" and add static/CNAME.
-baseURL      = "https://cbudjan.github.io/itr-site/"
+baseURL      = "https://tearoomseminars.github.io/"
 locale = "en"
 title        = "International Tea Room"
 theme        = "itr"

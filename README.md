@@ -8,7 +8,7 @@ GitHub Pages via GitHub Actions (same setup as cbudjan.com).
 
 ```bash
 brew install hugo          # once
-hugo server -D             # live preview at http://localhost:1313/itr-site/
+hugo server -D             # live preview at http://localhost:1313/
 ```
 
 Push to `main` → GitHub Actions builds and deploys. A weekly scheduled build keeps
@@ -101,21 +101,15 @@ owned by the shared organizers' Gmail account (so every submission lands in one 
 Tip: turn **off** "Restrict to users in your organisation" and "Limit to 1 response"
 so people without a Google account can submit.
 
-## Moving the repo to a shared GitHub account (later)
+## Hosting
 
-GitHub → repo *Settings → General → Transfer ownership*. The transfer keeps history,
-issues and collaborators, and old URLs redirect. Afterwards:
-
-1. Re-enable Pages on the new owner (*Settings → Pages → Source: GitHub Actions*)
-   and re-run the deploy workflow.
-2. Update `baseURL` in `hugo.toml` to `https://<new-owner>.github.io/itr-site/`
-   (unnecessary once a custom domain is in place — the domain hides the owner).
-3. Update `params.social.github` and the `git remote` on your clone.
-
-Alternative in the meantime: add the other organizers as collaborators on your repo.
+The repo lives in the `tearoomseminars` GitHub organization as
+`tearoomseminars.github.io`, which is why the site is served at the root of
+https://tearoomseminars.github.io/. Organizers are members of the org; add new
+organizers under *Organization → People*.
 
 ## Custom domain (later)
 
-1. Buy the domain, point `A`/`ALIAS` records at GitHub Pages (or a `CNAME` to `cbudjan.github.io`).
+1. Buy the domain, point `A`/`ALIAS` records at GitHub Pages (or a `CNAME` to `tearoomseminars.github.io`).
 2. Add `static/CNAME` containing the bare domain.
 3. Change `baseURL` in `hugo.toml`.
