@@ -23,8 +23,8 @@ buildFuture = true
   # See README.md for a description of each.
   design = "microscope"
 
-  tagline     = "A virtual seminar series on gastruloids and stem cell-based embryo models"
-  description = "The International Tea Room (ITR) is a monthly virtual seminar series and community for researchers working on gastruloids and other stem cell-based embryo models."
+  tagline     = "A virtual seminar series on embryos and stem cell-based embryo models, particularly gastruloids"
+  description = "The International Tea Room (ITR) is a monthly virtual seminar series and community for researchers working on embryos and stem cell-based embryo models, particularly gastruloids."
 
   # Shown on the home page and in the schedule header.
   # Keep in sync with the actual recurring slot.

@@ -10,13 +10,13 @@ layout: "about"
 ## What it is
 
 The International Tea Room (ITR) is a **community seminar series** for researchers working
-with gastruloids and other stem cell-based embryo models. Sessions are informal by design:
+on embryos and stem cell-based embryo models, particularly gastruloids. Sessions are informal by design:
 the goal is to discuss work in progress, preprints and unpublished data, and to compare notes
 on the details of culture methods and analysis that usually stay out of published papers.
 
 ## Who it is for
 
-Anyone actively working with, or planning to work with, stem cell-based embryo models:
+Anyone actively working on embryos or with stem cell-based embryo models, particularly gastruloids, or planning to:
 
 - gastruloids (mouse, human and other species)
 - trunk-like structures, somitoids, neuruloids and other regionalised models
@@ -49,7 +49,10 @@ Slack access is invite-only; tick the box on the [join form]({{< relref "subscri
 The series began as the *Gastruloids Tea Room* — informal meetings hosted by Alfonso Martinez
 Arias' lab in the tea room of the Department of Genetics, University of Cambridge. During the
 COVID-19 pandemic it moved to Zoom and opened to labs worldwide. In 2026 the organising team
-expanded, and with the 2026–27 season the series widened its scope to all stem cell-based
-embryo models.
+expanded, and with the 2026–27 season the series widened its scope to embryos and stem
+cell-based embryo models of all kinds.
 
-<!-- TODO: add founding year, a sentence on the first online sessions, and a photo if available -->
+{{< figure src="img/history/tea-room-genetics.jpg" caption="The tea room of the Department of Genetics, University of Cambridge, where it all started." >}}
+
+<!-- TODO: add founding year and a sentence on the first online sessions.
+     The photo above is pending from André; the figure is hidden until the file exists. -->

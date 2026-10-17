@@ -1,0 +1,8 @@
+{{/* Renders an image with optional caption; silently renders nothing if the file is missing. */}}
+{{ $src := .Get "src" }}
+{{ if fileExists (printf "static/%s" $src) }}
+<figure class="content-figure">
+  <img src="{{ $src | relURL }}" alt="{{ .Get "alt" | default (.Get "caption") }}" loading="lazy">
+  {{ with .Get "caption" }}<figcaption>{{ . }}</figcaption>{{ end }}
+</figure>
+{{ end }}
