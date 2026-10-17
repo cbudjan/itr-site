@@ -8,5 +8,4 @@ subnav:
   - { name: "Organizers", url: "#organizers" }
 ---
 
-Everyone who has presented at the Tea Room, and the team that runs it. Speaker entries are
-generated from the [schedule]({{< relref "schedule" >}}) — add a talk and the speaker appears here.
+Everyone who has presented at the Tea Room, and the team that runs it.

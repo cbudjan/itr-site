@@ -98,7 +98,7 @@ owned by the shared organizers' Gmail account (so every submission lands in one 
 4. Optional: in the form's *Responses* tab, link a Google Sheet — that sheet becomes the
    membership list.
 
-Tip: turn **off** "Restrict to users in your organisation" and "Limit to 1 response"
+Tip: turn **off** "Restrict to users in your organization" and "Limit to 1 response"
 so people without a Google account can submit.
 
 ## Hosting

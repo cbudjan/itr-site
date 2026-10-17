@@ -16,10 +16,10 @@ on the details of culture methods and analysis that usually stay out of publishe
 
 ## Who it is for
 
-Anyone actively working on embryos or with stem cell-based embryo models, particularly gastruloids, or planning to:
+Anyone working on embryos or with stem cell-based embryo models, or planning to. That includes:
 
 - gastruloids (mouse, human and other species)
-- trunk-like structures, somitoids, neuruloids and other regionalised models
+- trunk-like structures, somitoids, neuruloids and other regionalized models
 - blastoids, embryoids, ETX/ETiX and post-implantation models
 - micropattern-based 2D models and organ-level assembloids
 
@@ -48,9 +48,9 @@ Slack access is invite-only; tick the box on the [join form]({{< relref "subscri
 
 The series began as the *Gastruloids Tea Room* — informal meetings hosted by Alfonso Martinez
 Arias' lab in the tea room of the Department of Genetics, University of Cambridge. During the
-COVID-19 pandemic it moved to Zoom and opened to labs worldwide. In 2026 the organising team
-expanded, and with the 2026–27 season the series widened its scope to embryos and stem
-cell-based embryo models of all kinds.
+COVID-19 pandemic it moved to Zoom and opened to labs worldwide. In 2026 the organizing team
+expanded, and with the 2026–27 season the series widened its scope to embryos and all types
+of stem cell-based embryo models.
 
 {{< figure src="img/history/tea-room-genetics.jpg" caption="The tea room of the Department of Genetics, University of Cambridge, where it all started." >}}
 

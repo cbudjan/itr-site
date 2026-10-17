@@ -11,4 +11,4 @@ conference talks.
 It started as informal gatherings in the tea room of the Department of Genetics in
 Cambridge, moved online during the pandemic, and has since grown into an international
 community. From the 2026–27 season the scope broadens from gastruloids to embryos and
-stem cell-based embryo models of all kinds.
+all types of stem cell-based embryo models.

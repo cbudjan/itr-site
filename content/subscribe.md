@@ -5,7 +5,7 @@ layout: "subscribe"
 # hero_image: "img/heroes/join.jpg"
 ---
 
-Membership is **by request**. To keep the sessions a working discussion among people using
+Membership is **by request**. To keep sessions a working discussion among people who use
 these models, the organizers review each request; you will hear back by email, usually within
 a week. There is no fee.
 

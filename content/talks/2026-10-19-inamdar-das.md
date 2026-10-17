@@ -22,7 +22,7 @@ Opening session of the 2026–27 season.
 **Maneesha S. Inamdar** is Director of BRIC-inStem and Professor at JNCASR in Bengaluru. A cell
 and developmental biologist, she uses human embryonic stem cells, mice and *Drosophila* to study
 how organelles such as endosomes, mitochondria and the cytoskeleton regulate blood stem cell fate
-and cardiovascular development. She derived the first well-characterised human embryonic stem
+and cardiovascular development. She derived the first well-characterized human embryonic stem
 cell lines of Indian ethnic background, and her current focus is on human stem cell-based embryo
 models to study early development, congenital defects and drug de-risking.
 

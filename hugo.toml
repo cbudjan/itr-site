@@ -40,7 +40,7 @@ buildFuture = true
   # Default hero image. Any page can override it with `hero_image:` in its front
   # matter (see content/about.md) — put images in static/img/heroes/.
   hero_image = "img/heroes/default.jpg"   # TODO: replace with community microscopy image
-  hero_credit = "TODO: image credit"      # shown small in the hero corner (optional)
+  hero_credit = ""                        # e.g. "Image: Name, Lab" — shown small in the hero corner; empty = hidden
 
   [params.forms]
     # Both forms are Google Forms owned by the shared organizers' Gmail account.
